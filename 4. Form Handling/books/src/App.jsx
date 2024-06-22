@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
-import BookCreate from './components/BookCreate';
-import BookList from './components/BookList';
+import React, { useState } from "react";
+import BookCreate from "./components/BookCreate";
+import BookList from "./components/BookList";
 
 const App = () => {
+  const [books, setBooks] = useState([]);
 
-  const [books,setBooks] = useState([]);
-
-  const createBook  =(title) =>{
-    setBooks([...books,
-      {id: Math.round(Math.random() * 999999),title}
-    ])
-  }
+  const createBook = (title) => {
+    setBooks([...books, { id: Math.round(Math.random() * 999999), title }]);
+  };
 
   return (
     <div>
@@ -20,10 +17,10 @@ const App = () => {
         <li key={ele.id}>{ele.title}</li>
       ))}
       </ul> */}
-      <BookList bookList={books}/>
-      <BookCreate handleCreateBook = {createBook}/>
+      <BookList bookList={books} />
+      <BookCreate handleCreateBook={createBook} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

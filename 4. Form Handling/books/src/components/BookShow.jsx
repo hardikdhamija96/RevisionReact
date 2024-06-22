@@ -1,11 +1,16 @@
 import React from "react";
 
-const BookShow = ({title}) => {
+const BookShow = ({title,remove,id}) => {
+  console.log(`Title is : ${title}`)
+  
   return (
     <div>
       <p>This is Book Show</p>
       <h1>{title}</h1>
-      <button>
+      <button onClick={()=>{
+        remove(id);
+        console.log(`${title}`)
+      }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
