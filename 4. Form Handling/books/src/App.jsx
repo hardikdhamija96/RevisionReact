@@ -5,7 +5,14 @@ import "./App.css";
 
 const App = () => {
   const [books, setBooks] = useState([]);
-  const [filteredBookList, setFilteredBookList] = useState(books);
+
+  const updateTitle = (str , id) =>{
+    setBooks(
+      prevItems => prevItems.map((item) =>
+      item.id ===id ? {...item, title:str}: item
+      )
+    )
+  }
 
   const createBook = (title) => {
     setBooks([...books, { id: Math.round(Math.random() * 999999), title }]);
@@ -23,7 +30,7 @@ const App = () => {
     <div className="app">
       
       <BookCreate handleCreateBook={createBook} />
-      <BookList bookList={books} removeElement={removeElement} />
+      <BookList bookList={books} removeElement={removeElement} setBooks={setBooks} update={updateTitle}/>
     </div>
   );
 };

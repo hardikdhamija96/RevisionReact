@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import BookShow from "./BookShow";
 import './BookList.css'
 
-const BookList = ({ bookList, removeElement }) => {
+const BookList = ({ bookList, removeElement ,setBooks, update}) => {
 
+  
 
   return (
     <div className="BookList">
@@ -21,6 +22,7 @@ const BookList = ({ bookList, removeElement }) => {
           key={ele.id}
           title={ele.title}
           remove={removeElement}
+          updateName = {update}
           id={ele.id}
         />
       ))}
