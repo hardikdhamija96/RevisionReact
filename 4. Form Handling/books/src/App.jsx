@@ -11,12 +11,6 @@ const App = () => {
 
   return (
     <div>
-      {/* Book list:
-      <ul>
-      {books.map((ele)=>(
-        <li key={ele.id}>{ele.title}</li>
-      ))}
-      </ul> */}
       <BookList bookList={books} />
       <BookCreate handleCreateBook={createBook} />
     </div>
