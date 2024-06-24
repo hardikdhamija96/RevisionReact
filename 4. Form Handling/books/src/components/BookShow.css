@@ -1,0 +1,23 @@
+.bookShow{
+    background-color: rgb(140, 227, 227);
+    padding: 2rem;
+    width: 500px;
+    /* height: 200px; */
+    margin: 1rem 1rem 1rem 0;
+    display: flex;
+}
+
+.bookTitle{
+    color: rgb(68, 59, 122);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+}
+
+.bookShowButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:baseline;
+    justify-content: space-between;
+    width:20%;
+}

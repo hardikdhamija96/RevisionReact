@@ -1,0 +1,16 @@
+.bookCreate{
+    background-color: beige;
+    padding: 1rem 0;
+}
+
+.createForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.formHeading{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 1rem;
+}
