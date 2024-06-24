@@ -1,0 +1,13 @@
+.bookNotPresentHeading{
+    padding: 2rem 0;
+    color: rgb(202, 13, 13);
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bookShowContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

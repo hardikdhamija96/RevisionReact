@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import BookShow from "./BookShow";
+import './BookList.css'
 
 const BookList = ({ bookList, removeElement }) => {
 
 
   return (
-    <div>
-      <p>This is Book List</p>
+    <div className="BookList">
       <div>
         {bookList.length === 0 ? (
-          <div>No Book Present</div>
+          <div className="bookNotPresentHeading">No Book Present</div>
         ) : (
           <div></div>
         )}
       </div>
 
+        <div className="bookShowContainer">
       {bookList.map((ele) => (
         <BookShow
           key={ele.id}
@@ -23,6 +24,7 @@ const BookList = ({ bookList, removeElement }) => {
           id={ele.id}
         />
       ))}
+      </div>
     </div>
   );
 };
