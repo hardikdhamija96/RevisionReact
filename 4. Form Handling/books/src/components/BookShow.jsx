@@ -11,7 +11,7 @@ const BookShow = ({ title, remove, id, updateName }) => {
     <div className="bookShow">
       {showEdit ? <BookEdit prevTitle={title}  updateName={updateName} id={id} setShowEdit={setShowEdit}/> : <h1 className="bookTitle">{title}</h1>}
       <div className="bookShowButtons">
-        <button
+        {showEdit?<></>:<button
           onClick={() => {
             // console.log(`edit button clicked`);
             setShowEdit(!showEdit);
@@ -31,7 +31,7 @@ const BookShow = ({ title, remove, id, updateName }) => {
               <path d="M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3"></path>
             </g>
           </svg>
-        </button>
+        </button>}
 
         <button
           onClick={() => {

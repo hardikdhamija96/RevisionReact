@@ -24,8 +24,6 @@ const App = () => {
     setBooks(updatedBookList);
   };
 
-  
-
   return (
     <div className="app">
       
