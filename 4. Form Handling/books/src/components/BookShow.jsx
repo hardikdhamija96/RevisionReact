@@ -36,7 +36,7 @@ const BookShow = ({ title, remove, id, updateName }) => {
         <button
           onClick={() => {
             remove(id);
-            console.log(`${title}`);
+            // console.log(`${title}`);
           }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

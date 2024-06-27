@@ -9,7 +9,7 @@ const BookEdit = ({prevTitle,updateName,id,setShowEdit}) => {
 
   const handleSubmit = (event) =>{
     event.preventDefault();
-    console.log(`New Title is : ${title}`)
+    // console.log(`New Title is : ${title}`)
     updateName(title,id);
     setTitle('');
     setShowEdit(false);
