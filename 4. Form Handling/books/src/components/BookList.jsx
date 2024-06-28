@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import BookShow from "./BookShow";
 import './BookList.css'
+import BooksContext from "../context/books.jsx";
 
-const BookList = ({ bookList, removeElement ,setBooks, update}) => {
+const BookList = () => {
 
-  
+  const {books,removeElement,updateTitle} = useContext(BooksContext);
 
   return (
     <div className="BookList">
+      
       <div>
-        {bookList.length === 0 ? (
+        {books.length === 0 ? (
           <div className="bookNotPresentHeading">No Book Present</div>
         ) : (
           <div></div>
@@ -17,12 +19,12 @@ const BookList = ({ bookList, removeElement ,setBooks, update}) => {
       </div>
 
         <div className="bookShowContainer">
-      {bookList.map((ele) => (
+      {books.map((ele) => (
         <BookShow
           key={ele.id}
           title={ele.title}
           remove={removeElement}
-          updateName = {update}
+          updateName = {updateTitle}
           id={ele.id}
         />
       ))}
