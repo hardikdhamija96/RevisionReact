@@ -10,42 +10,72 @@ const FORM_VALUE_TO_BE_CHANGED = 'form-value-to-be-changed';
 
 const reducer = 
 (state, action) => {
-  if(action.type === INCREMENT_COUNT)
-    {
-      return {
-        ...state,
+
+
+  switch(action.type){
+    case INCREMENT_COUNT:
+    return {
+      ...state,
         count: state.count + 1,
-        
-      };
-    }
-
-    if(action.type === DECREMENT_COUNT)
-      {
-        return {
-          ...state,
+    };
+    case DECREMENT_COUNT:
+      return{
+        ...state,
           count: state.count - 1,
-          
-        };
       }
-
-    if(action.type === FORM_VALUE_TO_BE_CHANGED)
-      {
-        return{
-          ...state,
+    case FORM_VALUE_TO_BE_CHANGED:
+      return{
+        ...state,
           valueToAdd: action.payload
-        };
       }
-
-    if(action.type === SET_VALUE_TO_ADD)
-      {
-        return {
-          ...state,
+    case SET_VALUE_TO_ADD:
+      return{
+        ...state,
           count: state.count + state.valueToAdd,
           valueToAdd: 0,
-        };
       }
+    
+    default:
+      return state;
+  }
 
-    return state;
+
+  // if(action.type === INCREMENT_COUNT)
+  //   {
+  //     return {
+  //       ...state,
+  //       count: state.count + 1,
+        
+  //     };
+  //   }
+
+  //   if(action.type === DECREMENT_COUNT)
+  //     {
+  //       return {
+  //         ...state,
+  //         count: state.count - 1,
+          
+  //       };
+  //     }
+
+  //   if(action.type === FORM_VALUE_TO_BE_CHANGED)
+  //     {
+  //       return{
+  //         ...state,
+  //         valueToAdd: action.payload
+  //       };
+  //     }
+
+  //   if(action.type === SET_VALUE_TO_ADD)
+  //     {
+  //       return {
+  //         ...state,
+  //         count: state.count + state.valueToAdd,
+  //         valueToAdd: 0,
+  //       };
+  //     }
+
+  //   return state;
 }
 
 const App = () => {
